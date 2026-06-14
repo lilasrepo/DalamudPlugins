@@ -1,0 +1,22 @@
+[
+{
+  "Author": "Det",
+  "Name": "AutoHook (TC12)",
+  "InternalName": "AutoHook",
+  "AssemblyVersion": "4.3.4.1",
+  "Description": "It hooks the fish for you, can you believe it?",
+  "Punchline": "Makes fishing less (or more) boring",
+  "ApplicableVersion": "any",
+  "RepoUrl": "https://github.com/lilasrepo/AutoHook",
+  "DalamudApiLevel": 12,
+  "Tags": [
+    "Gathering",
+    "Fishing"
+  ],
+  "IconUrl": "https://s3.puni.sh/media/plugin/47/icon-k1slevjorpo.png",
+  "DownloadLinkInstall": "https://github.com/lilasrepo/AutoHook/releases/download/v4.3.4.1-TC12/AutoHook.zip",
+  "DownloadLinkUpdate": "https://github.com/lilasrepo/AutoHook/releases/download/v4.3.4.1-TC12/AutoHook.zip",
+  "DownloadLinkTesting": "https://github.com/lilasrepo/AutoHook/releases/download/v4.3.4.1-TC12/AutoHook.zip",
+  "LastUpdate": 1781441079
+}
+]
