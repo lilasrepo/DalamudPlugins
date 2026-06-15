@@ -1,7 +1,7 @@
 [
 {
   "Author": "NightmareXIV",
-  "Name": "AntiAfkKick (TC12)",
+  "Name": "AntiAfkKick [TC api12]",
   "InternalName": "AntiAfkKick-Dalamud",
   "AssemblyVersion": "2.1.0.11",
   "Description": "A Dalamud plugin for preventing being auto-kicked from FFXIV due to inactivity. Install and forget, no config needed.",
@@ -16,11 +16,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/AntiAfkKick/releases/download/v2.1.0.11-TC12/AntiAfkKick-Dalamud.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/AntiAfkKick/releases/download/v2.1.0.11-TC12/AntiAfkKick-Dalamud.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/AntiAfkKick/releases/download/v2.1.0.11-TC12/AntiAfkKick-Dalamud.zip",
-  "LastUpdate": 1781474750
+  "LastUpdate": 1781541010
 },
 {
   "Author": "Taurenkey (Puni.sh)",
-  "Name": "Artisan (TC12)",
+  "Name": "Artisan [TC api12]",
   "InternalName": "Artisan",
   "AssemblyVersion": "4.0.3.45",
   "Description": "The all-in-one crafting plugin.",
@@ -35,11 +35,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/Artisan/releases/download/v4.0.3.45-TC12/Artisan.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/Artisan/releases/download/v4.0.3.45-TC12/Artisan.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/Artisan/releases/download/v4.0.3.45-TC12/Artisan.zip",
-  "LastUpdate": 1781474750
+  "LastUpdate": 1781541010
 },
 {
   "Author": "Herculezz, erdelf",
-  "Name": "AutoDuty (TC12)",
+  "Name": "AutoDuty [TC api12]",
   "InternalName": "AutoDuty",
   "AssemblyVersion": "0.0.0.311",
   "Description": "A plugin to run dungeons for you with Trust, Duty Support, Squadrons, Variants, and Regular, Requires BossMod, vnavmesh and a Rotation Plugin (Wrath Combo, BossMod AutoRotation, or RotationSolverReborn)",
@@ -54,11 +54,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/AutoDuty/releases/download/v0.0.0.311-TC12/AutoDuty.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/AutoDuty/releases/download/v0.0.0.311-TC12/AutoDuty.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/AutoDuty/releases/download/v0.0.0.311-TC12/AutoDuty.zip",
-  "LastUpdate": 1781474751
+  "LastUpdate": 1781541011
 },
 {
   "Author": "Det",
-  "Name": "AutoHook (TC12)",
+  "Name": "AutoHook [TC api12]",
   "InternalName": "AutoHook",
   "AssemblyVersion": "4.3.4.1",
   "Description": "It hooks the fish for you, can you believe it?",
@@ -74,11 +74,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/AutoHook/releases/download/v4.3.4.1-TC12/AutoHook.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/AutoHook/releases/download/v4.3.4.1-TC12/AutoHook.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/AutoHook/releases/download/v4.3.4.1-TC12/AutoHook.zip",
-  "LastUpdate": 1781474751
+  "LastUpdate": 1781541011
 },
 {
   "Author": "NightmareXIV, kawaii",
-  "Name": "AutoRetainer (TC12)",
+  "Name": "AutoRetainer [TC api12]",
   "InternalName": "AutoRetainer",
   "AssemblyVersion": "4.6.1.2",
   "Description": "Collect and assign ventures to your retainers from the comfort of your bed.",
@@ -93,11 +93,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/AutoRetainer/releases/download/v4.6.1.2-TC12/AutoRetainer.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/AutoRetainer/releases/download/v4.6.1.2-TC12/AutoRetainer.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/AutoRetainer/releases/download/v4.6.1.2-TC12/AutoRetainer.zip",
-  "LastUpdate": 1781474752
+  "LastUpdate": 1781541012
 },
 {
   "Author": "KangasZ",
-  "Name": "SkipCutscene (TC12)",
+  "Name": "SkipCutscene [TC api12]",
   "InternalName": "SkipCutscene",
   "AssemblyVersion": "3.0.1.5",
   "Description": "A plugin which could help you skip cutscene from Duty Roulette: Main Scenario.",
@@ -112,11 +112,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/SkipCutscene/releases/download/v3.0.1.5-TC12/SkipCutscene.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/SkipCutscene/releases/download/v3.0.1.5-TC12/SkipCutscene.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/SkipCutscene/releases/download/v3.0.1.5-TC12/SkipCutscene.zip",
-  "LastUpdate": 1781474752
+  "LastUpdate": 1781541012
 },
 {
   "Author": "veyn",
-  "Name": "Boss Mod (TC12)",
+  "Name": "Boss Mod [TC api12]",
   "InternalName": "BossMod",
   "AssemblyVersion": "7.5.0.26",
   "Description": "A bunch of utilities to simplify bosses.",
@@ -131,11 +131,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/ffxiv_bossmod/releases/download/v7.5.0.26-TC12/BossMod.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/ffxiv_bossmod/releases/download/v7.5.0.26-TC12/BossMod.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/ffxiv_bossmod/releases/download/v7.5.0.26-TC12/BossMod.zip",
-  "LastUpdate": 1781474752
+  "LastUpdate": 1781541013
 },
 {
   "Author": "veyn",
-  "Name": "vnavmesh (TC12)",
+  "Name": "vnavmesh [TC api12]",
   "InternalName": "vnavmesh",
   "AssemblyVersion": "1.2.3.5",
   "Description": "Utility to automatically move the character around in the world, skilfully avoiding any obstacles.",
@@ -150,11 +150,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/ffxiv_navmesh/releases/download/v1.2.3.5-TC12/vnavmesh.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/ffxiv_navmesh/releases/download/v1.2.3.5-TC12/vnavmesh.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/ffxiv_navmesh/releases/download/v1.2.3.5-TC12/vnavmesh.zip",
-  "LastUpdate": 1781474753
+  "LastUpdate": 1781541013
 },
 {
   "Author": "croizat",
-  "Name": "CBT (TC12)",
+  "Name": "CBT [TC api12]",
   "InternalName": "Automaton",
   "AssemblyVersion": "69.75.0.0",
   "Description": "Tweaks that are sometimes simple, sometimes not.",
@@ -170,11 +170,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/ffxiv-bundleoftweaks/releases/download/v69.75.0.0-TC12/Automaton.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/ffxiv-bundleoftweaks/releases/download/v69.75.0.0-TC12/Automaton.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/ffxiv-bundleoftweaks/releases/download/v69.75.0.0-TC12/Automaton.zip",
-  "LastUpdate": 1781474753
+  "LastUpdate": 1781541014
 },
 {
   "Author": "Kouzukii",
-  "Name": "Price Insight (TC12)",
+  "Name": "Price Insight [TC api12]",
   "InternalName": "PriceInsight",
   "AssemblyVersion": "2.11.5.0",
   "Description": "Whenever you mouseover an item, it will show you the NQ/HQ marketboard prices at the bottom as well as the most recent purchase.\nPrices are retrieved from Universalis.app and cached for 90 minutes.\nTo refresh a price you can tap Alt while hovering over an item.\n",
@@ -191,11 +191,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/ffxiv-priceinsight/releases/download/v2.11.5.0-TC12/PriceInsight.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/ffxiv-priceinsight/releases/download/v2.11.5.0-TC12/PriceInsight.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/ffxiv-priceinsight/releases/download/v2.11.5.0-TC12/PriceInsight.zip",
-  "LastUpdate": 1781474754
+  "LastUpdate": 1781541014
 },
 {
   "Author": "The Combat Reborn Team",
-  "Name": "GatherBuddy Reborn (TC12)",
+  "Name": "GatherBuddy Reborn [TC api12]",
   "InternalName": "GatherBuddyReborn",
   "AssemblyVersion": "7.2.4.0",
   "Description": "Adds commands to simplify gathering by finding nodes and fish and their locations\nvia item name and a UI to keep track of special uptime and weather conditions.",
@@ -216,11 +216,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/GatherBuddyReborn/releases/download/v7.2.4.0-TC12/GatherBuddyReborn.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/GatherBuddyReborn/releases/download/v7.2.4.0-TC12/GatherBuddyReborn.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/GatherBuddyReborn/releases/download/v7.2.4.0-TC12/GatherBuddyReborn.zip",
-  "LastUpdate": 1781474754
+  "LastUpdate": 1781541015
 },
 {
   "Author": "Liza Carvelli",
-  "Name": "Gearsetter (TC12)",
+  "Name": "Gearsetter [TC api12]",
   "InternalName": "Gearsetter",
   "AssemblyVersion": "4.3",
   "Description": "Browse through all gear pieces available for each class/job and show possible upgrades",
@@ -236,11 +236,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/Gearsetter/releases/download/v4.3-TC12/Gearsetter.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/Gearsetter/releases/download/v4.3-TC12/Gearsetter.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/Gearsetter/releases/download/v4.3-TC12/Gearsetter.zip",
-  "LastUpdate": 1781474755
+  "LastUpdate": 1781541015
 },
 {
   "Author": "NightmareXIV",
-  "Name": "Lifestream (TC12)",
+  "Name": "Lifestream [TC api12]",
   "InternalName": "Lifestream",
   "AssemblyVersion": "2.5.4.9",
   "Description": "- One click to teleport to any world or aethernet destination\n- Click on aetheryte shards inside zone map to teleport to them",
@@ -255,11 +255,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/Lifestream/releases/download/v2.5.4.9-TC12/Lifestream.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/Lifestream/releases/download/v2.5.4.9-TC12/Lifestream.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/Lifestream/releases/download/v2.5.4.9-TC12/Lifestream.zip",
-  "LastUpdate": 1781474755
+  "LastUpdate": 1781541016
 },
 {
   "Author": "UnknownX",
-  "Name": "NoClippy (TC12)",
+  "Name": "NoClippy [TC api12]",
   "InternalName": "NoClippy",
   "AssemblyVersion": "0.5.0.24",
   "Description": "Reduces the effects of lag on certain aspects of the game, such as weaving and statuses. Usable as an alternative, or in addition, to XivAlexander.",
@@ -274,11 +274,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/NoClippy/releases/download/v0.5.0.24-TC12/NoClippy.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/NoClippy/releases/download/v0.5.0.24-TC12/NoClippy.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/NoClippy/releases/download/v0.5.0.24-TC12/NoClippy.zip",
-  "LastUpdate": 1781474756
+  "LastUpdate": 1781541016
 },
 {
   "Author": "NightmareXIV",
-  "Name": "NotificationMaster (TC12)",
+  "Name": "NotificationMaster [TC api12]",
   "InternalName": "NotificationMaster",
   "AssemblyVersion": "2.1.1.16",
   "Description": "Notifies you about various events while your game is minimized.",
@@ -293,11 +293,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/NotificationMaster/releases/download/v2.1.1.16-TC12/NotificationMaster.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/NotificationMaster/releases/download/v2.1.1.16-TC12/NotificationMaster.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/NotificationMaster/releases/download/v2.1.1.16-TC12/NotificationMaster.zip",
-  "LastUpdate": 1781474756
+  "LastUpdate": 1781541017
 },
 {
   "Author": "кайт машина (Puni.sh)",
-  "Name": "Orbwalker (TC12)",
+  "Name": "Orbwalker [TC api12]",
   "InternalName": "Orbwalker",
   "AssemblyVersion": "1.0.1.10",
   "Description": "Locks player movement while casting and allows for maximum caster uptime during the course of a fight.",
@@ -312,11 +312,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/Orbwalker/releases/download/v1.0.1.10-TC12/Orbwalker.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/Orbwalker/releases/download/v1.0.1.10-TC12/Orbwalker.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/Orbwalker/releases/download/v1.0.1.10-TC12/Orbwalker.zip",
-  "LastUpdate": 1781474757
+  "LastUpdate": 1781541017
 },
 {
   "Author": "Liza Carvelli (Puni.sh)",
-  "Name": "Palace Pal (TC12)",
+  "Name": "Palace Pal [TC api12]",
   "InternalName": "PalacePal",
   "AssemblyVersion": "4.15.0.0",
   "Description": "Shows possible trap & Accursed Hoard locations in Palace of The Dead, Heaven on High, and Eureka Orthos.\n\nThis plugin requires Splatoon in order to render various draws on the screen.",
@@ -334,11 +334,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/PalacePal/releases/download/v4.15.0.0-TC12/PalacePal.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/PalacePal/releases/download/v4.15.0.0-TC12/PalacePal.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/PalacePal/releases/download/v4.15.0.0-TC12/PalacePal.zip",
-  "LastUpdate": 1781474757
+  "LastUpdate": 1781541018
 },
 {
   "Author": "Taurenkey (Puni.sh)",
-  "Name": "Pandora's Box (TC12)",
+  "Name": "Pandora's Box [TC api12]",
   "InternalName": "PandorasBox",
   "AssemblyVersion": "1.6.4.3",
   "Description": "Pandora's Box is a collection of major QoL tweaks and adjustments.\n\nOpen the box with /pandora",
@@ -354,11 +354,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/PandorasBox/releases/download/v1.6.4.3-TC12/PandorasBox.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/PandorasBox/releases/download/v1.6.4.3-TC12/PandorasBox.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/PandorasBox/releases/download/v1.6.4.3-TC12/PandorasBox.zip",
-  "LastUpdate": 1781474758
+  "LastUpdate": 1781541018
 },
 {
   "Author": "liza, qstxiv, & various contributors",
-  "Name": "Questionable (TC12)",
+  "Name": "Questionable [TC api12]",
   "InternalName": "Questionable",
   "AssemblyVersion": "15.300.0.4",
   "Description": "A tiny little quest helper plugin, which does quests for you automatically where possible. Uses navmesh to automatically walk to all quest waypoints, and tries to automatically complete all steps along the way (excluding dungeons, single player duties and combat).\n\nNot all quests are supported, check the discord or git repository for an up-to-date list.\n\nRequired Plugins: vnavmesh, TextAdvance, Lifestream",
@@ -374,11 +374,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/Questionable/releases/download/v15.300.0.4-TC12/Questionable.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/Questionable/releases/download/v15.300.0.4-TC12/Questionable.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/Questionable/releases/download/v15.300.0.4-TC12/Questionable.zip",
-  "LastUpdate": 1781474758
+  "LastUpdate": 1781541019
 },
 {
   "Author": "Taurenkey, Kagekazu",
-  "Name": "Saucy (TC12)",
+  "Name": "Saucy [TC api12]",
   "InternalName": "Saucy",
   "AssemblyVersion": "1.6.0.0",
   "Description": "Automates certain Gold Saucer mini-games.",
@@ -395,11 +395,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/Saucy/releases/download/v1.6.0.0-TC12/Saucy.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/Saucy/releases/download/v1.6.0.0-TC12/Saucy.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/Saucy/releases/download/v1.6.0.0-TC12/Saucy.zip",
-  "LastUpdate": 1781474759
+  "LastUpdate": 1781541020
 },
 {
   "Author": "daemitus, croizat",
-  "Name": "Something Need Doing (TC12)",
+  "Name": "Something Need Doing [TC api12]",
   "InternalName": "SomethingNeedDoing",
   "AssemblyVersion": "15.2",
   "Description": "Now for more than crafting!",
@@ -418,11 +418,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/SomethingNeedDoing/releases/download/v15.2-TC12/SomethingNeedDoing.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/SomethingNeedDoing/releases/download/v15.2-TC12/SomethingNeedDoing.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/SomethingNeedDoing/releases/download/v15.2-TC12/SomethingNeedDoing.zip",
-  "LastUpdate": 1781474760
+  "LastUpdate": 1781541020
 },
 {
   "Author": "NightmareXIV",
-  "Name": "Splatoon (TC12)",
+  "Name": "Splatoon [TC api12]",
   "InternalName": "Splatoon",
   "AssemblyVersion": "3.9.2.3",
   "Description": "Splatoon is a powerful accessibility tool. It revolutionizes gameplay with its custom waymark system, offering the ability to create unlimited grouped waymarks, labels, and actor indicators with exacting pixel precision. This feature empowers players by making crucial objects and events more visually discernible, thereby facilitating quicker reactions. However, it's important to note that the plugin does not come pre-loaded with presets. Players have the freedom to craft their own or import existing ones, offering a personalized touch to their gaming experience.",
@@ -438,11 +438,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/Splatoon/releases/download/v3.9.2.3-TC12/Splatoon.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/Splatoon/releases/download/v3.9.2.3-TC12/Splatoon.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/Splatoon/releases/download/v3.9.2.3-TC12/Splatoon.zip",
-  "LastUpdate": 1781474760
+  "LastUpdate": 1781541021
 },
 {
   "Author": "NightmareXIV",
-  "Name": "TextAdvance (TC12)",
+  "Name": "TextAdvance [TC api12]",
   "InternalName": "TextAdvance",
   "AssemblyVersion": "3.3.0.1",
   "Description": "",
@@ -457,11 +457,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/TextAdvance/releases/download/v3.3.0.1-TC12/TextAdvance.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/TextAdvance/releases/download/v3.3.0.1-TC12/TextAdvance.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/TextAdvance/releases/download/v3.3.0.1-TC12/TextAdvance.zip",
-  "LastUpdate": 1781474761
+  "LastUpdate": 1781541021
 },
 {
   "Author": "Team Wrath",
-  "Name": "Wrath Combo (TC12)",
+  "Name": "Wrath Combo [TC api12]",
   "InternalName": "WrathCombo",
   "AssemblyVersion": "1.0.4.8",
   "Description": "Condenses combos and mutually exclusive abilities onto a single button - and then some.",
@@ -483,11 +483,11 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/WrathCombo/releases/download/v1.0.4.8-TC12/WrathCombo.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/WrathCombo/releases/download/v1.0.4.8-TC12/WrathCombo.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/WrathCombo/releases/download/v1.0.4.8-TC12/WrathCombo.zip",
-  "LastUpdate": 1781474761
+  "LastUpdate": 1781541022
 },
 {
   "Author": "daemitus, croizat",
-  "Name": "YesAlready (TC12)",
+  "Name": "YesAlready [TC api12]",
   "InternalName": "YesAlready",
   "AssemblyVersion": "1.15.2.2",
   "Description": "Tired of clicking yes in Praetorium? Can't stand using keys in dungeons? Well do I have the plugin for you! Yes Already is specifically designed to click all the annoying dialogs you've grown accustomed facerolling. Just enter the dialog text, and you'll never see it again! Also works with /regex/ and has several built-in modules for dialogs that aren't quite yes/no prompts but act like it (like desynth).",
@@ -503,6 +503,6 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/YesAlready/releases/download/v1.15.2.2-TC12/YesAlready.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/YesAlready/releases/download/v1.15.2.2-TC12/YesAlready.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/YesAlready/releases/download/v1.15.2.2-TC12/YesAlready.zip",
-  "LastUpdate": 1781474762
+  "LastUpdate": 1781541022
 }
 ]

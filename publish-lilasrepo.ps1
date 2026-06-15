@@ -122,9 +122,15 @@ function Get-StageManifest([string]$stageDir){
   return $null
 }
 
+# Display marker shown in the plugin installer. Derived from $ApiLevel so a future TC API
+# bump only needs -ApiLevel changed. Idempotent: strips any prior "(TCxx)" or "[TC apixx]"
+# suffix (incl. the staged name pre-stamped by scripts/stamp-tc-marker.ps1) before re-appending.
+function Get-DisplayName([string]$raw){
+  $base = ($raw -replace '\s*\(TC\d+\)\s*$','' -replace '\s*\[TC\s*api\d+\]\s*$','').Trim()
+  return "$base [TC api$ApiLevel]"
+}
 function New-Entry($m,[string]$repo,[string]$tag){
-  $name = [string]$m.Name
-  if ($name -notlike "*($ApiSuffix)*") { $name = "$name ($ApiSuffix)" }
+  $name = Get-DisplayName ([string]$m.Name)
   $dl = "https://github.com/$Account/$repo/releases/download/$tag/$($m.InternalName).zip"
   $internal = [string]$m.InternalName
   if ($SelfHostedIcons -contains $internal) {
@@ -216,7 +222,7 @@ foreach ($p in $selected) {
     $ver = [string]$man.Data.AssemblyVersion
     $internal = [string]$man.Data.InternalName
     $tag = "v$ver-$ApiSuffix"
-    $title = "$($man.Data.Name) $ver $ApiSuffix"
+    $title = "$(Get-DisplayName ([string]$man.Data.Name)) $ver"
     Write-Host "  manifest: InternalName=$internal  ver=$ver  tag=$tag"
 
     # ---- 1. fork ----
