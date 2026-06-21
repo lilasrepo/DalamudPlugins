@@ -16,7 +16,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/AntiAfkKick/releases/download/v2.1.0.11-TC12/AntiAfkKick-Dalamud.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/AntiAfkKick/releases/download/v2.1.0.11-TC12/AntiAfkKick-Dalamud.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/AntiAfkKick/releases/download/v2.1.0.11-TC12/AntiAfkKick-Dalamud.zip",
-  "LastUpdate": 1781541010
+  "LastUpdate": 1782024126
 },
 {
   "Author": "Taurenkey (Puni.sh)",
@@ -35,7 +35,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/Artisan/releases/download/v4.0.3.45-TC12/Artisan.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/Artisan/releases/download/v4.0.3.45-TC12/Artisan.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/Artisan/releases/download/v4.0.3.45-TC12/Artisan.zip",
-  "LastUpdate": 1781541010
+  "LastUpdate": 1782024127
 },
 {
   "Author": "Herculezz, erdelf",
@@ -50,11 +50,11 @@
   "Tags": [
     null
   ],
-  "IconUrl": "https://s3.puni.sh/media/plugin/54/icon-15ug2vnr9m1.png",
+  "IconUrl": "https://puni.sh/api/plugins/icon/54",
   "DownloadLinkInstall": "https://github.com/lilasrepo/AutoDuty/releases/download/v0.0.0.311-TC12/AutoDuty.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/AutoDuty/releases/download/v0.0.0.311-TC12/AutoDuty.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/AutoDuty/releases/download/v0.0.0.311-TC12/AutoDuty.zip",
-  "LastUpdate": 1781541011
+  "LastUpdate": 1782024127
 },
 {
   "Author": "Det",
@@ -74,13 +74,13 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/AutoHook/releases/download/v4.3.4.1-TC12/AutoHook.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/AutoHook/releases/download/v4.3.4.1-TC12/AutoHook.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/AutoHook/releases/download/v4.3.4.1-TC12/AutoHook.zip",
-  "LastUpdate": 1781541011
+  "LastUpdate": 1782024128
 },
 {
   "Author": "NightmareXIV, kawaii",
   "Name": "AutoRetainer [TC api12]",
   "InternalName": "AutoRetainer",
-  "AssemblyVersion": "4.6.1.2",
+  "AssemblyVersion": "4.6.1.5",
   "Description": "Collect and assign ventures to your retainers from the comfort of your bed.",
   "Punchline": "Collect and assign ventures to your retainers from the comfort of your bed.",
   "ApplicableVersion": "any",
@@ -90,10 +90,10 @@
     null
   ],
   "IconUrl": "https://s3.puni.sh/media/plugin/24/icon-drb6aywk5m9.png",
-  "DownloadLinkInstall": "https://github.com/lilasrepo/AutoRetainer/releases/download/v4.6.1.2-TC12/AutoRetainer.zip",
-  "DownloadLinkUpdate": "https://github.com/lilasrepo/AutoRetainer/releases/download/v4.6.1.2-TC12/AutoRetainer.zip",
-  "DownloadLinkTesting": "https://github.com/lilasrepo/AutoRetainer/releases/download/v4.6.1.2-TC12/AutoRetainer.zip",
-  "LastUpdate": 1781541012
+  "DownloadLinkInstall": "https://github.com/lilasrepo/AutoRetainer/releases/download/v4.6.1.5-TC12/AutoRetainer.zip",
+  "DownloadLinkUpdate": "https://github.com/lilasrepo/AutoRetainer/releases/download/v4.6.1.5-TC12/AutoRetainer.zip",
+  "DownloadLinkTesting": "https://github.com/lilasrepo/AutoRetainer/releases/download/v4.6.1.5-TC12/AutoRetainer.zip",
+  "LastUpdate": 1782024128
 },
 {
   "Author": "KangasZ",
@@ -112,7 +112,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/SkipCutscene/releases/download/v3.0.1.5-TC12/SkipCutscene.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/SkipCutscene/releases/download/v3.0.1.5-TC12/SkipCutscene.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/SkipCutscene/releases/download/v3.0.1.5-TC12/SkipCutscene.zip",
-  "LastUpdate": 1781541012
+  "LastUpdate": 1782024129
 },
 {
   "Author": "veyn",
@@ -131,26 +131,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/ffxiv_bossmod/releases/download/v7.5.0.26-TC12/BossMod.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/ffxiv_bossmod/releases/download/v7.5.0.26-TC12/BossMod.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/ffxiv_bossmod/releases/download/v7.5.0.26-TC12/BossMod.zip",
-  "LastUpdate": 1781541013
-},
-{
-  "Author": "veyn",
-  "Name": "vnavmesh [TC api12]",
-  "InternalName": "vnavmesh",
-  "AssemblyVersion": "1.2.3.5",
-  "Description": "Utility to automatically move the character around in the world, skilfully avoiding any obstacles.",
-  "Punchline": "Move around!",
-  "ApplicableVersion": "any",
-  "RepoUrl": "https://github.com/lilasrepo/ffxiv_navmesh",
-  "DalamudApiLevel": 12,
-  "Tags": [
-    null
-  ],
-  "IconUrl": "https://raw.githubusercontent.com/awgil/ffxiv_navmesh/8dab2e675e51a03b1827d94e77616a8144892a72/icon2.png",
-  "DownloadLinkInstall": "https://github.com/lilasrepo/ffxiv_navmesh/releases/download/v1.2.3.5-TC12/vnavmesh.zip",
-  "DownloadLinkUpdate": "https://github.com/lilasrepo/ffxiv_navmesh/releases/download/v1.2.3.5-TC12/vnavmesh.zip",
-  "DownloadLinkTesting": "https://github.com/lilasrepo/ffxiv_navmesh/releases/download/v1.2.3.5-TC12/vnavmesh.zip",
-  "LastUpdate": 1781541013
+  "LastUpdate": 1782024129
 },
 {
   "Author": "croizat",
@@ -170,7 +151,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/ffxiv-bundleoftweaks/releases/download/v69.75.0.0-TC12/Automaton.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/ffxiv-bundleoftweaks/releases/download/v69.75.0.0-TC12/Automaton.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/ffxiv-bundleoftweaks/releases/download/v69.75.0.0-TC12/Automaton.zip",
-  "LastUpdate": 1781541014
+  "LastUpdate": 1782024130
 },
 {
   "Author": "Kouzukii",
@@ -191,7 +172,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/ffxiv-priceinsight/releases/download/v2.11.5.0-TC12/PriceInsight.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/ffxiv-priceinsight/releases/download/v2.11.5.0-TC12/PriceInsight.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/ffxiv-priceinsight/releases/download/v2.11.5.0-TC12/PriceInsight.zip",
-  "LastUpdate": 1781541014
+  "LastUpdate": 1782024131
 },
 {
   "Author": "The Combat Reborn Team",
@@ -216,7 +197,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/GatherBuddyReborn/releases/download/v7.2.4.0-TC12/GatherBuddyReborn.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/GatherBuddyReborn/releases/download/v7.2.4.0-TC12/GatherBuddyReborn.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/GatherBuddyReborn/releases/download/v7.2.4.0-TC12/GatherBuddyReborn.zip",
-  "LastUpdate": 1781541015
+  "LastUpdate": 1782024131
 },
 {
   "Author": "Liza Carvelli",
@@ -236,7 +217,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/Gearsetter/releases/download/v4.3-TC12/Gearsetter.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/Gearsetter/releases/download/v4.3-TC12/Gearsetter.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/Gearsetter/releases/download/v4.3-TC12/Gearsetter.zip",
-  "LastUpdate": 1781541015
+  "LastUpdate": 1782024132
 },
 {
   "Author": "NightmareXIV",
@@ -255,7 +236,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/Lifestream/releases/download/v2.5.4.9-TC12/Lifestream.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/Lifestream/releases/download/v2.5.4.9-TC12/Lifestream.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/Lifestream/releases/download/v2.5.4.9-TC12/Lifestream.zip",
-  "LastUpdate": 1781541016
+  "LastUpdate": 1782024133
 },
 {
   "Author": "UnknownX",
@@ -274,13 +255,13 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/NoClippy/releases/download/v0.5.0.24-TC12/NoClippy.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/NoClippy/releases/download/v0.5.0.24-TC12/NoClippy.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/NoClippy/releases/download/v0.5.0.24-TC12/NoClippy.zip",
-  "LastUpdate": 1781541016
+  "LastUpdate": 1782024133
 },
 {
   "Author": "NightmareXIV",
   "Name": "NotificationMaster [TC api12]",
   "InternalName": "NotificationMaster",
-  "AssemblyVersion": "2.1.1.16",
+  "AssemblyVersion": "2.1.1.17",
   "Description": "Notifies you about various events while your game is minimized.",
   "Punchline": "Currently supports notifications: chat messages, approaching map flag, duty found, ending of cutscenes, gp restoration, error during logging in, mob has been pulled.",
   "ApplicableVersion": "any",
@@ -290,10 +271,10 @@
     "notification"
   ],
   "IconUrl": "https://raw.githubusercontent.com/lilasrepo/DalamudPlugins/main/icons/NotificationMaster.png",
-  "DownloadLinkInstall": "https://github.com/lilasrepo/NotificationMaster/releases/download/v2.1.1.16-TC12/NotificationMaster.zip",
-  "DownloadLinkUpdate": "https://github.com/lilasrepo/NotificationMaster/releases/download/v2.1.1.16-TC12/NotificationMaster.zip",
-  "DownloadLinkTesting": "https://github.com/lilasrepo/NotificationMaster/releases/download/v2.1.1.16-TC12/NotificationMaster.zip",
-  "LastUpdate": 1781541017
+  "DownloadLinkInstall": "https://github.com/lilasrepo/NotificationMaster/releases/download/v2.1.1.17-TC12/NotificationMaster.zip",
+  "DownloadLinkUpdate": "https://github.com/lilasrepo/NotificationMaster/releases/download/v2.1.1.17-TC12/NotificationMaster.zip",
+  "DownloadLinkTesting": "https://github.com/lilasrepo/NotificationMaster/releases/download/v2.1.1.17-TC12/NotificationMaster.zip",
+  "LastUpdate": 1782024134
 },
 {
   "Author": "кайт машина (Puni.sh)",
@@ -312,7 +293,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/Orbwalker/releases/download/v1.0.1.10-TC12/Orbwalker.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/Orbwalker/releases/download/v1.0.1.10-TC12/Orbwalker.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/Orbwalker/releases/download/v1.0.1.10-TC12/Orbwalker.zip",
-  "LastUpdate": 1781541017
+  "LastUpdate": 1782024134
 },
 {
   "Author": "Liza Carvelli (Puni.sh)",
@@ -334,7 +315,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/PalacePal/releases/download/v4.15.0.0-TC12/PalacePal.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/PalacePal/releases/download/v4.15.0.0-TC12/PalacePal.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/PalacePal/releases/download/v4.15.0.0-TC12/PalacePal.zip",
-  "LastUpdate": 1781541018
+  "LastUpdate": 1782024135
 },
 {
   "Author": "Taurenkey (Puni.sh)",
@@ -354,13 +335,13 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/PandorasBox/releases/download/v1.6.4.3-TC12/PandorasBox.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/PandorasBox/releases/download/v1.6.4.3-TC12/PandorasBox.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/PandorasBox/releases/download/v1.6.4.3-TC12/PandorasBox.zip",
-  "LastUpdate": 1781541018
+  "LastUpdate": 1782024135
 },
 {
   "Author": "liza, qstxiv, & various contributors",
   "Name": "Questionable [TC api12]",
   "InternalName": "Questionable",
-  "AssemblyVersion": "15.300.0.4",
+  "AssemblyVersion": "15.301.0.28",
   "Description": "A tiny little quest helper plugin, which does quests for you automatically where possible. Uses navmesh to automatically walk to all quest waypoints, and tries to automatically complete all steps along the way (excluding dungeons, single player duties and combat).\n\nNot all quests are supported, check the discord or git repository for an up-to-date list.\n\nRequired Plugins: vnavmesh, TextAdvance, Lifestream",
   "Punchline": "A tiny quest helper plugin.",
   "ApplicableVersion": "any",
@@ -371,16 +352,16 @@
     "msq"
   ],
   "IconUrl": "https://qstxiv.github.io/icons/Questionable.png",
-  "DownloadLinkInstall": "https://github.com/lilasrepo/Questionable/releases/download/v15.300.0.4-TC12/Questionable.zip",
-  "DownloadLinkUpdate": "https://github.com/lilasrepo/Questionable/releases/download/v15.300.0.4-TC12/Questionable.zip",
-  "DownloadLinkTesting": "https://github.com/lilasrepo/Questionable/releases/download/v15.300.0.4-TC12/Questionable.zip",
-  "LastUpdate": 1781541019
+  "DownloadLinkInstall": "https://github.com/lilasrepo/Questionable/releases/download/v15.301.0.28-TC12/Questionable.zip",
+  "DownloadLinkUpdate": "https://github.com/lilasrepo/Questionable/releases/download/v15.301.0.28-TC12/Questionable.zip",
+  "DownloadLinkTesting": "https://github.com/lilasrepo/Questionable/releases/download/v15.301.0.28-TC12/Questionable.zip",
+  "LastUpdate": 1782024136
 },
 {
   "Author": "Taurenkey, Kagekazu",
   "Name": "Saucy [TC api12]",
   "InternalName": "Saucy",
-  "AssemblyVersion": "1.6.0.0",
+  "AssemblyVersion": "2.1.1.9",
   "Description": "Automates certain Gold Saucer mini-games.",
   "Punchline": "When working for MGP is too much effort.",
   "ApplicableVersion": "any",
@@ -392,10 +373,10 @@
     "automation"
   ],
   "IconUrl": "https://s3.puni.sh/media/plugin/7/icon-bl3wub19h2u.png",
-  "DownloadLinkInstall": "https://github.com/lilasrepo/Saucy/releases/download/v1.6.0.0-TC12/Saucy.zip",
-  "DownloadLinkUpdate": "https://github.com/lilasrepo/Saucy/releases/download/v1.6.0.0-TC12/Saucy.zip",
-  "DownloadLinkTesting": "https://github.com/lilasrepo/Saucy/releases/download/v1.6.0.0-TC12/Saucy.zip",
-  "LastUpdate": 1781541020
+  "DownloadLinkInstall": "https://github.com/lilasrepo/Saucy/releases/download/v2.1.1.9-TC12/Saucy.zip",
+  "DownloadLinkUpdate": "https://github.com/lilasrepo/Saucy/releases/download/v2.1.1.9-TC12/Saucy.zip",
+  "DownloadLinkTesting": "https://github.com/lilasrepo/Saucy/releases/download/v2.1.1.9-TC12/Saucy.zip",
+  "LastUpdate": 1782024136
 },
 {
   "Author": "daemitus, croizat",
@@ -418,13 +399,13 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/SomethingNeedDoing/releases/download/v15.2-TC12/SomethingNeedDoing.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/SomethingNeedDoing/releases/download/v15.2-TC12/SomethingNeedDoing.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/SomethingNeedDoing/releases/download/v15.2-TC12/SomethingNeedDoing.zip",
-  "LastUpdate": 1781541020
+  "LastUpdate": 1782024137
 },
 {
   "Author": "NightmareXIV",
   "Name": "Splatoon [TC api12]",
   "InternalName": "Splatoon",
-  "AssemblyVersion": "3.9.2.3",
+  "AssemblyVersion": "3.9.2.8",
   "Description": "Splatoon is a powerful accessibility tool. It revolutionizes gameplay with its custom waymark system, offering the ability to create unlimited grouped waymarks, labels, and actor indicators with exacting pixel precision. This feature empowers players by making crucial objects and events more visually discernible, thereby facilitating quicker reactions. However, it's important to note that the plugin does not come pre-loaded with presets. Players have the freedom to craft their own or import existing ones, offering a personalized touch to their gaming experience.",
   "Punchline": "Redefining FFXIV navigation with unlimited, precise waymarks.",
   "ApplicableVersion": "any",
@@ -435,10 +416,10 @@
     "Accessibility"
   ],
   "IconUrl": "https://raw.githubusercontent.com/lilasrepo/DalamudPlugins/main/icons/Splatoon.png",
-  "DownloadLinkInstall": "https://github.com/lilasrepo/Splatoon/releases/download/v3.9.2.3-TC12/Splatoon.zip",
-  "DownloadLinkUpdate": "https://github.com/lilasrepo/Splatoon/releases/download/v3.9.2.3-TC12/Splatoon.zip",
-  "DownloadLinkTesting": "https://github.com/lilasrepo/Splatoon/releases/download/v3.9.2.3-TC12/Splatoon.zip",
-  "LastUpdate": 1781541021
+  "DownloadLinkInstall": "https://github.com/lilasrepo/Splatoon/releases/download/v3.9.2.8-TC12/Splatoon.zip",
+  "DownloadLinkUpdate": "https://github.com/lilasrepo/Splatoon/releases/download/v3.9.2.8-TC12/Splatoon.zip",
+  "DownloadLinkTesting": "https://github.com/lilasrepo/Splatoon/releases/download/v3.9.2.8-TC12/Splatoon.zip",
+  "LastUpdate": 1782024137
 },
 {
   "Author": "NightmareXIV",
@@ -457,13 +438,13 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/TextAdvance/releases/download/v3.3.0.1-TC12/TextAdvance.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/TextAdvance/releases/download/v3.3.0.1-TC12/TextAdvance.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/TextAdvance/releases/download/v3.3.0.1-TC12/TextAdvance.zip",
-  "LastUpdate": 1781541021
+  "LastUpdate": 1782024138
 },
 {
   "Author": "Team Wrath",
   "Name": "Wrath Combo [TC api12]",
   "InternalName": "WrathCombo",
-  "AssemblyVersion": "1.0.4.8",
+  "AssemblyVersion": "1.0.4.9",
   "Description": "Condenses combos and mutually exclusive abilities onto a single button - and then some.",
   "Punchline": "Condenses combos and mutually exclusive abilities onto a single button - and then some.",
   "ApplicableVersion": "any",
@@ -480,10 +461,10 @@
     "pvp"
   ],
   "IconUrl": "https://s3.puni.sh/media/plugin/60/icon-2bwhkn3zf1f.png",
-  "DownloadLinkInstall": "https://github.com/lilasrepo/WrathCombo/releases/download/v1.0.4.8-TC12/WrathCombo.zip",
-  "DownloadLinkUpdate": "https://github.com/lilasrepo/WrathCombo/releases/download/v1.0.4.8-TC12/WrathCombo.zip",
-  "DownloadLinkTesting": "https://github.com/lilasrepo/WrathCombo/releases/download/v1.0.4.8-TC12/WrathCombo.zip",
-  "LastUpdate": 1781541022
+  "DownloadLinkInstall": "https://github.com/lilasrepo/WrathCombo/releases/download/v1.0.4.9-TC12/WrathCombo.zip",
+  "DownloadLinkUpdate": "https://github.com/lilasrepo/WrathCombo/releases/download/v1.0.4.9-TC12/WrathCombo.zip",
+  "DownloadLinkTesting": "https://github.com/lilasrepo/WrathCombo/releases/download/v1.0.4.9-TC12/WrathCombo.zip",
+  "LastUpdate": 1782024138
 },
 {
   "Author": "daemitus, croizat",
@@ -503,6 +484,6 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/YesAlready/releases/download/v1.15.2.2-TC12/YesAlready.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/YesAlready/releases/download/v1.15.2.2-TC12/YesAlready.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/YesAlready/releases/download/v1.15.2.2-TC12/YesAlready.zip",
-  "LastUpdate": 1781541022
+  "LastUpdate": 1782024139
 }
 ]
