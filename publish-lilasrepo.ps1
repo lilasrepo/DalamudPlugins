@@ -43,6 +43,7 @@ param(
   [switch]$SkipSource,
   [switch]$SkipRelease,
   [switch]$ManifestOnly,
+  [switch]$AllowStaleRepublish,   # override the frozen-version soft-block (publish a same-version re-clobber anyway, e.g. icon/manifest-only)
   [string[]]$FreshHistory = @()   # plugin name(s) (Src/Stage/repo) to publish as ONE clean orphan commit + force-push (wipes prior history; use to scrub a past leak)
 )
 
@@ -163,6 +164,41 @@ function Write-Utf8NoBom([string]$path,[string]$text){
   [System.IO.File]::WriteAllText($path,$text,(New-Object System.Text.UTF8Encoding($false)))
 }
 
+# Layer-1 frozen-version guard: a refresh that changes a plugin's BUILD but NOT its AssemblyVersion
+# publishes as a same-tag --clobber, and the in-game updater (which keys on AssemblyVersion) never
+# offers it to installed clients. Stranded <=> the v<ver>-TC12 tag already exists AND a BUILD-RELEVANT
+# file under TC_forward/<Src> changed AFTER that tag was first created (= the version's content moved
+# without the version number moving; anyone who installed the original v-build is stuck). We compare
+# against the tag's CREATION time (which a --clobber does NOT advance), so the warning persists after a
+# clobber until the operator actually bumps + cuts a new tag (then the window resets and it self-clears).
+# Doc-only churn (README/LICENSE/CONTRIBUTING/.github) is excluded so a docs commit never trips it.
+# Any gh/git error => not-stale (no false alarm). Read-only; safe in dry-run + execute.
+function Test-StaleRepublish([string]$repo,[string]$tag,[string]$srcRel,[string]$root){
+  # raw ISO createdAt (UTC, e.g. 2026-06-24T12:59:04Z) — use --jq so ConvertFrom-Json doesn't mangle the tz
+  $rel = Gh release view $tag --repo "$Account/$repo" --json createdAt --jq .createdAt
+  if (-not $rel.Ok) { return [pscustomobject]@{ Stale=$false; Note='new version (no existing tag)' } }
+  $created = $rel.Out.Trim()
+  if (-not $created) { return [pscustomobject]@{ Stale=$false; Note='tag exists; createdAt unknown' } }
+  if (-not (Test-Path (Join-Path $root $srcRel))) { return [pscustomobject]@{ Stale=$false; Note='no source dir' } }
+  $inv = [cultureinfo]::InvariantCulture
+  $createdDto = $null
+  try { $createdDto = [datetimeoffset]::Parse($created, $inv) } catch { return [pscustomobject]@{ Stale=$false; Note="unparseable createdAt '$created'" } }
+  # most recent build-relevant commit touching the plugin (committer date %cI, with tz), docs excluded
+  $gitArgs = @('-C', $root, 'log', '-1', '--format=%cI', '--', $srcRel,
+    ":(exclude,glob)$srcRel/**/*.md", ":(exclude,glob)$srcRel/**/README*",
+    ":(exclude,glob)$srcRel/**/LICENSE*", ":(exclude,glob)$srcRel/**/CONTRIBUTING*",
+    ":(exclude,glob)$srcRel/**/.github/**",
+    ":(exclude)$srcRel/.walkback-paths", ":(exclude)$srcRel/.walkback-counter.json")
+  $lastStr = (& git @gitArgs 2>$null | Select-Object -First 1)
+  if (-not $lastStr) { return [pscustomobject]@{ Stale=$false; Note='no build-relevant commit' } }
+  $lastDto = $null
+  try { $lastDto = [datetimeoffset]::Parse($lastStr.Trim(), $inv) } catch { return [pscustomobject]@{ Stale=$false; Note="unparseable commit date '$lastStr'" } }
+  if ($lastDto -gt $createdDto) {
+    return [pscustomobject]@{ Stale=$true; Note="build-relevant commit ($($lastDto.ToString('u'))) is newer than tag created ($($createdDto.ToString('u')))" }
+  }
+  return [pscustomobject]@{ Stale=$false; Note='no build-relevant change since release' }
+}
+
 # ---------------------------------------------------------------------------- preflight ----
 Write-Host "==========================================================" -ForegroundColor Cyan
 Write-Host (" lilasrepo publish  |  mode = {0}" -f $(if($DryRun){'DRY-RUN (no changes)'}else{'EXECUTE'})) -ForegroundColor Cyan
@@ -206,6 +242,36 @@ Write-Host ""
 
 $work  = Join-Path $env:TEMP ("lilasrepo-work-" + [guid]::NewGuid().ToString('N').Substring(0,8))
 $results = @()
+$staleWarnings = @()   # Layer-1: plugins whose staged version == an existing tag but build is newer
+$staleMap = @{}        # Stage -> note (populated by the pre-flight below)
+
+# ------------------------------------------------ Layer-1 frozen-version pre-flight (read-only) ----
+# Runs BEFORE any outward action so the soft-block can abort execute with nothing pushed.
+if (-not $ManifestOnly) {
+  foreach ($p in $selected) {
+    $repo = $p.Up.Split('/')[-1]
+    $man  = Get-StageManifest (Join-Path $SourceRoot ("TC_plugin\" + $p.Stage))
+    if (-not $man) { continue }
+    $ver = [string]$man.Data.AssemblyVersion
+    $tag = "v$ver-$ApiSuffix"
+    $st  = Test-StaleRepublish $repo $tag ("TC_forward/" + $p.Src) $SourceRoot
+    if ($st.Stale) {
+      $staleMap[$p.Stage] = $st.Note
+      $staleWarnings += $p.Stage
+      Write-Host ("WARNING frozen-version: {0} v{1} already published, but {2}." -f $p.Stage,$ver,$st.Note) -ForegroundColor Red
+      Write-Host  "         -> re-clobbers the SAME tag; installed clients will NOT be offered the update. Bump <Version> first." -ForegroundColor Red
+    }
+  }
+  if ($staleMap.Count -gt 0 -and -not $DryRun -and -not $AllowStaleRepublish) {
+    $names = ($staleMap.Keys | Sort-Object) -join ', '
+    $msg = "ABORT (frozen-version soft-block): $($staleMap.Count) selected plugin(s) would re-clobber an unchanged version and never reach installed clients: $names. "
+    $msg += "Bump <Version> for each first -- pinned/TC-managed: re-run /plugin_update (Layer-2 auto-bump) or 'plugin_update.py bump --plugin <name>'; tracks-upstream: bump the 4th component by hand. "
+    $msg += "To publish anyway (e.g. an icon/manifest-only re-clobber), re-run with -AllowStaleRepublish."
+    Write-Host ""
+    throw $msg
+  }
+  if ($staleMap.Count -gt 0) { Write-Host "" }
+}
 
 # ---------------------------------------------------------------------------- per-plugin ----
 if (-not $ManifestOnly) {
@@ -224,6 +290,12 @@ foreach ($p in $selected) {
     $tag = "v$ver-$ApiSuffix"
     $title = "$(Get-DisplayName ([string]$man.Data.Name)) $ver"
     Write-Host "  manifest: InternalName=$internal  ver=$ver  tag=$tag"
+
+    # Layer-1 frozen-version: flagged in the pre-flight above (soft-block already enforced for execute)
+    if ($staleMap.ContainsKey($p.Stage)) {
+      $r.Note = "FROZEN-VERSION: $($staleMap[$p.Stage])"
+      if ($AllowStaleRepublish) { Write-Host "  (frozen-version override: publishing same-version re-clobber)" -ForegroundColor DarkYellow }
+    }
 
     # ---- 1. fork ----
     $have = Gh repo view "$Account/$repo" --json name
@@ -396,5 +468,9 @@ else {
 Write-Host ""
 Write-Host "================= summary =================" -ForegroundColor Cyan
 if ($results) { $results | Format-Table -AutoSize | Out-String | Write-Host }
+if ($staleWarnings.Count -gt 0) {
+  Write-Host ("FROZEN-VERSION WARNING: {0} plugin(s) will NOT reach installed clients (same version re-clobbered): {1}" -f $staleWarnings.Count, ($staleWarnings -join ', ')) -ForegroundColor Red
+  Write-Host  "  -> bump <Version> for each (or re-run /plugin_update so its Layer-2 auto-bump fires), then re-publish." -ForegroundColor Red
+}
 if ($DryRun) { Write-Host "DRY-RUN complete. Nothing was changed. Re-run with -Execute to apply." -ForegroundColor Yellow }
 else         { Write-Host "DONE." -ForegroundColor Green }

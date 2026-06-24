@@ -16,7 +16,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/AntiAfkKick/releases/download/v2.1.0.11-TC12/AntiAfkKick-Dalamud.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/AntiAfkKick/releases/download/v2.1.0.11-TC12/AntiAfkKick-Dalamud.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/AntiAfkKick/releases/download/v2.1.0.11-TC12/AntiAfkKick-Dalamud.zip",
-  "LastUpdate": 1782306050
+  "LastUpdate": 1782314663
 },
 {
   "Author": "Taurenkey (Puni.sh)",
@@ -35,13 +35,13 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/Artisan/releases/download/v4.0.3.45-TC12/Artisan.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/Artisan/releases/download/v4.0.3.45-TC12/Artisan.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/Artisan/releases/download/v4.0.3.45-TC12/Artisan.zip",
-  "LastUpdate": 1782306050
+  "LastUpdate": 1782314664
 },
 {
   "Author": "Herculezz, erdelf",
   "Name": "AutoDuty [TC api12]",
   "InternalName": "AutoDuty",
-  "AssemblyVersion": "0.0.0.311",
+  "AssemblyVersion": "0.0.0.312",
   "Description": "A plugin to run dungeons for you with Trust, Duty Support, Squadrons, Variants, and Regular, Requires BossMod, vnavmesh and a Rotation Plugin (Wrath Combo, BossMod AutoRotation, or RotationSolverReborn)",
   "Punchline": "AutoDuty",
   "ApplicableVersion": "any",
@@ -51,10 +51,10 @@
     null
   ],
   "IconUrl": "https://puni.sh/api/plugins/icon/54",
-  "DownloadLinkInstall": "https://github.com/lilasrepo/AutoDuty/releases/download/v0.0.0.311-TC12/AutoDuty.zip",
-  "DownloadLinkUpdate": "https://github.com/lilasrepo/AutoDuty/releases/download/v0.0.0.311-TC12/AutoDuty.zip",
-  "DownloadLinkTesting": "https://github.com/lilasrepo/AutoDuty/releases/download/v0.0.0.311-TC12/AutoDuty.zip",
-  "LastUpdate": 1782306051
+  "DownloadLinkInstall": "https://github.com/lilasrepo/AutoDuty/releases/download/v0.0.0.312-TC12/AutoDuty.zip",
+  "DownloadLinkUpdate": "https://github.com/lilasrepo/AutoDuty/releases/download/v0.0.0.312-TC12/AutoDuty.zip",
+  "DownloadLinkTesting": "https://github.com/lilasrepo/AutoDuty/releases/download/v0.0.0.312-TC12/AutoDuty.zip",
+  "LastUpdate": 1782314664
 },
 {
   "Author": "Det",
@@ -74,7 +74,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/AutoHook/releases/download/v4.3.4.1-TC12/AutoHook.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/AutoHook/releases/download/v4.3.4.1-TC12/AutoHook.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/AutoHook/releases/download/v4.3.4.1-TC12/AutoHook.zip",
-  "LastUpdate": 1782306051
+  "LastUpdate": 1782314665
 },
 {
   "Author": "NightmareXIV, kawaii",
@@ -93,7 +93,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/AutoRetainer/releases/download/v4.6.1.5-TC12/AutoRetainer.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/AutoRetainer/releases/download/v4.6.1.5-TC12/AutoRetainer.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/AutoRetainer/releases/download/v4.6.1.5-TC12/AutoRetainer.zip",
-  "LastUpdate": 1782306052
+  "LastUpdate": 1782314666
 },
 {
   "Author": "KangasZ",
@@ -112,13 +112,13 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/SkipCutscene/releases/download/v3.0.1.5-TC12/SkipCutscene.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/SkipCutscene/releases/download/v3.0.1.5-TC12/SkipCutscene.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/SkipCutscene/releases/download/v3.0.1.5-TC12/SkipCutscene.zip",
-  "LastUpdate": 1782306052
+  "LastUpdate": 1782314666
 },
 {
   "Author": "veyn",
   "Name": "Boss Mod [TC api12]",
   "InternalName": "BossMod",
-  "AssemblyVersion": "7.5.0.26",
+  "AssemblyVersion": "7.5.0.27",
   "Description": "A bunch of utilities to simplify bosses.",
   "Punchline": "Don't fail at raid mechanics anymore",
   "ApplicableVersion": "any",
@@ -128,10 +128,10 @@
     null
   ],
   "IconUrl": "https://raw.githubusercontent.com/awgil/ffxiv_bossmod/f4efcb5dc279d21ee16185d5a9f2d09a3a2bc58b/Data/icon.png",
-  "DownloadLinkInstall": "https://github.com/lilasrepo/ffxiv_bossmod/releases/download/v7.5.0.26-TC12/BossMod.zip",
-  "DownloadLinkUpdate": "https://github.com/lilasrepo/ffxiv_bossmod/releases/download/v7.5.0.26-TC12/BossMod.zip",
-  "DownloadLinkTesting": "https://github.com/lilasrepo/ffxiv_bossmod/releases/download/v7.5.0.26-TC12/BossMod.zip",
-  "LastUpdate": 1782306053
+  "DownloadLinkInstall": "https://github.com/lilasrepo/ffxiv_bossmod/releases/download/v7.5.0.27-TC12/BossMod.zip",
+  "DownloadLinkUpdate": "https://github.com/lilasrepo/ffxiv_bossmod/releases/download/v7.5.0.27-TC12/BossMod.zip",
+  "DownloadLinkTesting": "https://github.com/lilasrepo/ffxiv_bossmod/releases/download/v7.5.0.27-TC12/BossMod.zip",
+  "LastUpdate": 1782314667
 },
 {
   "Author": "veyn",
@@ -150,7 +150,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/ffxiv_navmesh/releases/download/v1.2.3.7-TC12/vnavmesh.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/ffxiv_navmesh/releases/download/v1.2.3.7-TC12/vnavmesh.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/ffxiv_navmesh/releases/download/v1.2.3.7-TC12/vnavmesh.zip",
-  "LastUpdate": 1782306053
+  "LastUpdate": 1782314667
 },
 {
   "Author": "croizat",
@@ -170,7 +170,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/ffxiv-bundleoftweaks/releases/download/v69.75.0.0-TC12/Automaton.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/ffxiv-bundleoftweaks/releases/download/v69.75.0.0-TC12/Automaton.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/ffxiv-bundleoftweaks/releases/download/v69.75.0.0-TC12/Automaton.zip",
-  "LastUpdate": 1782306054
+  "LastUpdate": 1782314668
 },
 {
   "Author": "Kouzukii",
@@ -191,7 +191,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/ffxiv-priceinsight/releases/download/v2.11.5.0-TC12/PriceInsight.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/ffxiv-priceinsight/releases/download/v2.11.5.0-TC12/PriceInsight.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/ffxiv-priceinsight/releases/download/v2.11.5.0-TC12/PriceInsight.zip",
-  "LastUpdate": 1782306054
+  "LastUpdate": 1782314669
 },
 {
   "Author": "The Combat Reborn Team",
@@ -216,7 +216,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/GatherBuddyReborn/releases/download/v7.2.4.0-TC12/GatherBuddyReborn.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/GatherBuddyReborn/releases/download/v7.2.4.0-TC12/GatherBuddyReborn.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/GatherBuddyReborn/releases/download/v7.2.4.0-TC12/GatherBuddyReborn.zip",
-  "LastUpdate": 1782306055
+  "LastUpdate": 1782314669
 },
 {
   "Author": "Liza Carvelli",
@@ -236,7 +236,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/Gearsetter/releases/download/v4.3-TC12/Gearsetter.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/Gearsetter/releases/download/v4.3-TC12/Gearsetter.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/Gearsetter/releases/download/v4.3-TC12/Gearsetter.zip",
-  "LastUpdate": 1782306055
+  "LastUpdate": 1782314670
 },
 {
   "Author": "NightmareXIV",
@@ -255,7 +255,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/Lifestream/releases/download/v2.5.4.9-TC12/Lifestream.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/Lifestream/releases/download/v2.5.4.9-TC12/Lifestream.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/Lifestream/releases/download/v2.5.4.9-TC12/Lifestream.zip",
-  "LastUpdate": 1782306056
+  "LastUpdate": 1782314670
 },
 {
   "Author": "UnknownX",
@@ -274,7 +274,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/NoClippy/releases/download/v0.5.0.24-TC12/NoClippy.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/NoClippy/releases/download/v0.5.0.24-TC12/NoClippy.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/NoClippy/releases/download/v0.5.0.24-TC12/NoClippy.zip",
-  "LastUpdate": 1782306056
+  "LastUpdate": 1782314671
 },
 {
   "Author": "NightmareXIV",
@@ -293,7 +293,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/NotificationMaster/releases/download/v2.1.1.17-TC12/NotificationMaster.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/NotificationMaster/releases/download/v2.1.1.17-TC12/NotificationMaster.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/NotificationMaster/releases/download/v2.1.1.17-TC12/NotificationMaster.zip",
-  "LastUpdate": 1782306057
+  "LastUpdate": 1782314671
 },
 {
   "Author": "кайт машина (Puni.sh)",
@@ -312,7 +312,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/Orbwalker/releases/download/v1.0.1.10-TC12/Orbwalker.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/Orbwalker/releases/download/v1.0.1.10-TC12/Orbwalker.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/Orbwalker/releases/download/v1.0.1.10-TC12/Orbwalker.zip",
-  "LastUpdate": 1782306057
+  "LastUpdate": 1782314672
 },
 {
   "Author": "Liza Carvelli (Puni.sh)",
@@ -334,7 +334,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/PalacePal/releases/download/v4.15.0.0-TC12/PalacePal.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/PalacePal/releases/download/v4.15.0.0-TC12/PalacePal.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/PalacePal/releases/download/v4.15.0.0-TC12/PalacePal.zip",
-  "LastUpdate": 1782306058
+  "LastUpdate": 1782314672
 },
 {
   "Author": "Taurenkey (Puni.sh)",
@@ -354,7 +354,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/PandorasBox/releases/download/v1.6.4.3-TC12/PandorasBox.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/PandorasBox/releases/download/v1.6.4.3-TC12/PandorasBox.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/PandorasBox/releases/download/v1.6.4.3-TC12/PandorasBox.zip",
-  "LastUpdate": 1782306058
+  "LastUpdate": 1782314673
 },
 {
   "Author": "liza, qstxiv, & various contributors",
@@ -374,7 +374,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/Questionable/releases/download/v15.302.0.2-TC12/Questionable.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/Questionable/releases/download/v15.302.0.2-TC12/Questionable.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/Questionable/releases/download/v15.302.0.2-TC12/Questionable.zip",
-  "LastUpdate": 1782306059
+  "LastUpdate": 1782314673
 },
 {
   "Author": "Taurenkey, Kagekazu",
@@ -395,13 +395,13 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/Saucy/releases/download/v2.1.1.11-TC12/Saucy.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/Saucy/releases/download/v2.1.1.11-TC12/Saucy.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/Saucy/releases/download/v2.1.1.11-TC12/Saucy.zip",
-  "LastUpdate": 1782306059
+  "LastUpdate": 1782314674
 },
 {
   "Author": "daemitus, croizat",
   "Name": "Something Need Doing [TC api12]",
   "InternalName": "SomethingNeedDoing",
-  "AssemblyVersion": "15.2",
+  "AssemblyVersion": "15.3",
   "Description": "Now for more than crafting!",
   "Punchline": "Work work.",
   "ApplicableVersion": "any",
@@ -415,10 +415,10 @@
     "scripting"
   ],
   "IconUrl": "https://raw.githubusercontent.com/Jaksuhn/SomethingNeedDoing/master/res/orc2.png",
-  "DownloadLinkInstall": "https://github.com/lilasrepo/SomethingNeedDoing/releases/download/v15.2-TC12/SomethingNeedDoing.zip",
-  "DownloadLinkUpdate": "https://github.com/lilasrepo/SomethingNeedDoing/releases/download/v15.2-TC12/SomethingNeedDoing.zip",
-  "DownloadLinkTesting": "https://github.com/lilasrepo/SomethingNeedDoing/releases/download/v15.2-TC12/SomethingNeedDoing.zip",
-  "LastUpdate": 1782306060
+  "DownloadLinkInstall": "https://github.com/lilasrepo/SomethingNeedDoing/releases/download/v15.3-TC12/SomethingNeedDoing.zip",
+  "DownloadLinkUpdate": "https://github.com/lilasrepo/SomethingNeedDoing/releases/download/v15.3-TC12/SomethingNeedDoing.zip",
+  "DownloadLinkTesting": "https://github.com/lilasrepo/SomethingNeedDoing/releases/download/v15.3-TC12/SomethingNeedDoing.zip",
+  "LastUpdate": 1782314674
 },
 {
   "Author": "NightmareXIV",
@@ -438,26 +438,7 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/Splatoon/releases/download/v3.9.2.9-TC12/Splatoon.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/Splatoon/releases/download/v3.9.2.9-TC12/Splatoon.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/Splatoon/releases/download/v3.9.2.9-TC12/Splatoon.zip",
-  "LastUpdate": 1782306060
-},
-{
-  "Author": "NightmareXIV",
-  "Name": "TextAdvance [TC api12]",
-  "InternalName": "TextAdvance",
-  "AssemblyVersion": "3.3.0.1",
-  "Description": "",
-  "Punchline": "Quest speedrunning assistance tool. Automatically skips subtitle boxes and confirms cutscene skipping",
-  "ApplicableVersion": "any",
-  "RepoUrl": "https://github.com/lilasrepo/TextAdvance",
-  "DalamudApiLevel": 12,
-  "Tags": [
-    null
-  ],
-  "IconUrl": "https://raw.githubusercontent.com/lilasrepo/DalamudPlugins/main/icons/TextAdvance.png",
-  "DownloadLinkInstall": "https://github.com/lilasrepo/TextAdvance/releases/download/v3.3.0.1-TC12/TextAdvance.zip",
-  "DownloadLinkUpdate": "https://github.com/lilasrepo/TextAdvance/releases/download/v3.3.0.1-TC12/TextAdvance.zip",
-  "DownloadLinkTesting": "https://github.com/lilasrepo/TextAdvance/releases/download/v3.3.0.1-TC12/TextAdvance.zip",
-  "LastUpdate": 1782306061
+  "LastUpdate": 1782314675
 },
 {
   "Author": "Team Wrath",
@@ -483,13 +464,13 @@
   "DownloadLinkInstall": "https://github.com/lilasrepo/WrathCombo/releases/download/v1.0.4.9-TC12/WrathCombo.zip",
   "DownloadLinkUpdate": "https://github.com/lilasrepo/WrathCombo/releases/download/v1.0.4.9-TC12/WrathCombo.zip",
   "DownloadLinkTesting": "https://github.com/lilasrepo/WrathCombo/releases/download/v1.0.4.9-TC12/WrathCombo.zip",
-  "LastUpdate": 1782306061
+  "LastUpdate": 1782314676
 },
 {
   "Author": "daemitus, croizat",
   "Name": "YesAlready [TC api12]",
   "InternalName": "YesAlready",
-  "AssemblyVersion": "1.15.2.2",
+  "AssemblyVersion": "1.15.2.3",
   "Description": "Tired of clicking yes in Praetorium? Can't stand using keys in dungeons? Well do I have the plugin for you! Yes Already is specifically designed to click all the annoying dialogs you've grown accustomed facerolling. Just enter the dialog text, and you'll never see it again! Also works with /regex/ and has several built-in modules for dialogs that aren't quite yes/no prompts but act like it (like desynth).",
   "Punchline": "Clicks Yes in various dialogs you've specified.",
   "ApplicableVersion": "any",
@@ -500,9 +481,9 @@
     "plugin"
   ],
   "IconUrl": "https://s3.puni.sh/media/plugin/26/icon-v1pvonkr6r.png",
-  "DownloadLinkInstall": "https://github.com/lilasrepo/YesAlready/releases/download/v1.15.2.2-TC12/YesAlready.zip",
-  "DownloadLinkUpdate": "https://github.com/lilasrepo/YesAlready/releases/download/v1.15.2.2-TC12/YesAlready.zip",
-  "DownloadLinkTesting": "https://github.com/lilasrepo/YesAlready/releases/download/v1.15.2.2-TC12/YesAlready.zip",
-  "LastUpdate": 1782306062
+  "DownloadLinkInstall": "https://github.com/lilasrepo/YesAlready/releases/download/v1.15.2.3-TC12/YesAlready.zip",
+  "DownloadLinkUpdate": "https://github.com/lilasrepo/YesAlready/releases/download/v1.15.2.3-TC12/YesAlready.zip",
+  "DownloadLinkTesting": "https://github.com/lilasrepo/YesAlready/releases/download/v1.15.2.3-TC12/YesAlready.zip",
+  "LastUpdate": 1782314676
 }
 ]
