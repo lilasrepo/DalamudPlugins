@@ -333,6 +333,13 @@ foreach ($p in $selected) {
       Get-ChildItem -LiteralPath $work -Recurse -Force -Directory -ErrorAction SilentlyContinue |
         Where-Object { $_.Name -eq '.git' -and $_.FullName -ne (Join-Path $work '.git') } | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
       Get-ChildItem -LiteralPath $work -Recurse -Force -File -Filter '.gitmodules' -ErrorAction SilentlyContinue | Remove-Item -Force -ErrorAction SilentlyContinue
+      # ALSO drop submodule .git FILE pointers ("gitdir: ../.git/modules/<sub>"): they survive the
+      # dir-only prune above and make `git add -A` fatal ("not a git repository: <sub>/../.git/modules/<sub>")
+      # on submodule-bearing plugins (e.g. TextAdvance's ClickLib/NightmareUI). The fatal aborts the add,
+      # so commit finds nothing staged and the publisher misreports a FALSE "source unchanged" (skips the
+      # push -> the fork's main is never created -> release create --target main 422s). Removing them lets
+      # the submodule working-tree content be committed as plain files. -File excludes the root .git dir.
+      Get-ChildItem -LiteralPath $work -Recurse -Force -File -Filter '.git' -ErrorAction SilentlyContinue | Remove-Item -Force -ErrorAction SilentlyContinue
 
       git -C $work add -A 2>&1 | Out-Null
       $outerSha = (& git -C $SourceRoot rev-parse --short HEAD 2>$null)
