@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-  Publish TC (Traditional-Chinese, API12, game 7.1) Dalamud plugin ports to the `lilasrepo`
+  Publish TC (Traditional-Chinese) Dalamud plugin ports to the `lilasrepo`
   GitHub account as per-plugin forks + GitHub releases + an aggregating pluginmaster.json.
 
 .DESCRIPTION
@@ -40,6 +40,7 @@ param(
   [string]$ManifestRepo = 'DalamudPlugins',
   [string]$ApiSuffix    = '',   # '' = sentinel: resolve from $SourceRoot\tc-runtime.json (release_tag_suffix); falls back to TC12 with a warning
   [int]   $ApiLevel     = 0,    # 0  = sentinel: resolve from $SourceRoot\tc-runtime.json (api_level); falls back to 12 with a warning
+  [string]$GamePatch    = '',   # '' = sentinel: resolve from $SourceRoot\tc-runtime.json (game_patch); release notes only
   [switch]$SkipSource,
   [switch]$SkipRelease,
   [switch]$ManifestOnly,
@@ -54,7 +55,7 @@ $DryRun = -not $Execute
 # Explicit -ApiLevel / -ApiSuffix always win. Without them, read $SourceRoot\tc-runtime.json;
 # if that file is unavailable, fall back to the API12-era values WITH a loud warning (so a
 # post-bump run against a stale/missing config can't silently tag TC12).
-if ((-not $ApiLevel) -or (-not $ApiSuffix)) {
+if ((-not $ApiLevel) -or (-not $ApiSuffix) -or (-not $GamePatch)) {
   $tcCfg = $null
   if ($SourceRoot) {
     $tcCfgPath = Join-Path $SourceRoot 'tc-runtime.json'
@@ -64,6 +65,9 @@ if ((-not $ApiLevel) -or (-not $ApiSuffix)) {
   }
   if (-not $ApiLevel)  { $ApiLevel  = if ($tcCfg) { [int]$tcCfg.api_level } else { Write-Warning "tc-runtime.json not found under -SourceRoot; defaulting ApiLevel=12"; 12 } }
   if (-not $ApiSuffix) { $ApiSuffix = if ($tcCfg) { [string]$tcCfg.release_tag_suffix } else { Write-Warning "tc-runtime.json not found under -SourceRoot; defaulting ApiSuffix=TC12"; 'TC12' } }
+  # Release notes only. Was hardcoded "game 7.1" and so kept claiming game 7.1 after the api13 bump,
+  # even though ApiLevel/ApiSuffix were already resolving correctly from the config.
+  if (-not $GamePatch) { $GamePatch = if ($tcCfg -and $tcCfg.game_patch) { [string]$tcCfg.game_patch } else { Write-Warning "tc-runtime.json not found/has no game_patch under -SourceRoot; omitting the game version from release notes"; '' } }
 }
 
 # ---- authoritative plugin table (Src = TC_forward dir, Stage = TC_plugin/InternalName dir, Up = upstream owner/repo) ----
@@ -359,7 +363,7 @@ foreach ($p in $selected) {
 
       git -C $work add -A 2>&1 | Out-Null
       $outerSha = (& git -C $SourceRoot rev-parse --short HEAD 2>$null)
-      git -C $work -c user.name='lilasrepo' -c user.email='lilasrepo@users.noreply.github.com' commit -m "port($($p.Stage)): TC API12 source (based on TC_forward @ $outerSha)" 2>&1 | Out-Null
+      git -C $work -c user.name='lilasrepo' -c user.email='lilasrepo@users.noreply.github.com' commit -m "port($($p.Stage)): TC API$ApiLevel source (based on TC_forward @ $outerSha)" 2>&1 | Out-Null
       if (-not $fresh -and $LASTEXITCODE -ne 0) { $r.Source='no-change'; Write-Host "  source unchanged" }
       else {
         $pushUrl = "https://$Account`:$token@github.com/$Account/$repo.git"
@@ -400,7 +404,8 @@ foreach ($p in $selected) {
         if (-not $u.Ok) { throw "release upload failed: $($u.Out.Trim())" }
         $r.Release='updated'
       } else {
-        $notes = "Traditional-Chinese ($ApiSuffix / Dalamud API$ApiLevel / game 7.1) port of $($man.Data.Name) $ver. Built from TC_forward."
+        $gameNote = if ($GamePatch) { " / game $GamePatch" } else { '' }
+        $notes = "Traditional-Chinese ($ApiSuffix / Dalamud API$ApiLevel$gameNote) port of $($man.Data.Name) $ver. Built from TC_forward."
         $c = Gh release create $tag --repo "$Account/$repo" --target main --title $title --notes $notes $zip
         if (-not $c.Ok) { throw "release create failed: $($c.Out.Trim())" }
         $r.Release='created'
