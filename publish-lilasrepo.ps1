@@ -84,6 +84,9 @@ $Table = @(
   @{ Src='ffxiv-priceinsight';   Stage='PriceInsight';       Up='Kouzukii/ffxiv-priceinsight' }
   @{ Src='GatherBuddyReborn';    Stage='GatherBuddyReborn';  Up='AtmoOmen/GatherBuddyReborn' }
   @{ Src='Gearsetter';           Stage='Gearsetter';         Up='VeraNala/Gearsetter' }
+  # Added 2026-07-29. Walk-back-pinned at 9c95ac3, the last net9 revision upstream shipped
+  # (56bee42 the same day moved the TFM to net10). InternalName is "ICE", not the repo name.
+  @{ Src='Ices-Cosmic-Exploration'; Stage='ICE';             Up='LeontopodiumNivale14/Ices-Cosmic-Exploration' }
   @{ Src='Lifestream';           Stage='Lifestream';         Up='NightmareXIV/Lifestream' }
   @{ Src='NoClippy';             Stage='NoClippy';           Up='UnknownX7/NoClippy' }
   @{ Src='NotificationMaster';   Stage='NotificationMaster'; Up='NightmareXIV/NotificationMaster' }
@@ -113,7 +116,7 @@ $SelfHostedIcons = @(
 )
 # InternalName -> upstream NEVER shipped an icon; force blank so Dalamud uses its placeholder
 # (also clears Gearsetter's dead carvel.li URL). Supply a custom PNG + move to $SelfHostedIcons later.
-$BlankIcons = @('Gearsetter','SkipCutscene','NoClippy')
+$BlankIcons = @('Gearsetter','SkipCutscene','NoClippy','ICE')
 
 # ---------------------------------------------------------------------------- helpers ----
 function Resolve-Gh {
