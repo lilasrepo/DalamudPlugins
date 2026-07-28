@@ -38,8 +38,8 @@ param(
   [string]$SourceRoot   = $env:TC_DALAMUD_ROOT,   # pass -SourceRoot or set $env:TC_DALAMUD_ROOT; no hardcoded path so this script is safe to publish
   [string]$Account      = 'lilasrepo',
   [string]$ManifestRepo = 'DalamudPlugins',
-  [string]$ApiSuffix    = 'TC12',
-  [int]   $ApiLevel     = 12,
+  [string]$ApiSuffix    = '',   # '' = sentinel: resolve from $SourceRoot\tc-runtime.json (release_tag_suffix); falls back to TC12 with a warning
+  [int]   $ApiLevel     = 0,    # 0  = sentinel: resolve from $SourceRoot\tc-runtime.json (api_level); falls back to 12 with a warning
   [switch]$SkipSource,
   [switch]$SkipRelease,
   [switch]$ManifestOnly,
@@ -49,6 +49,22 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $DryRun = -not $Execute
+
+# --- TC generation defaults from the source repo's tc-runtime.json (single source of truth) ---
+# Explicit -ApiLevel / -ApiSuffix always win. Without them, read $SourceRoot\tc-runtime.json;
+# if that file is unavailable, fall back to the API12-era values WITH a loud warning (so a
+# post-bump run against a stale/missing config can't silently tag TC12).
+if ((-not $ApiLevel) -or (-not $ApiSuffix)) {
+  $tcCfg = $null
+  if ($SourceRoot) {
+    $tcCfgPath = Join-Path $SourceRoot 'tc-runtime.json'
+    if (Test-Path $tcCfgPath) {
+      try { $tcCfg = Get-Content -Raw $tcCfgPath | ConvertFrom-Json } catch { $tcCfg = $null }
+    }
+  }
+  if (-not $ApiLevel)  { $ApiLevel  = if ($tcCfg) { [int]$tcCfg.api_level } else { Write-Warning "tc-runtime.json not found under -SourceRoot; defaulting ApiLevel=12"; 12 } }
+  if (-not $ApiSuffix) { $ApiSuffix = if ($tcCfg) { [string]$tcCfg.release_tag_suffix } else { Write-Warning "tc-runtime.json not found under -SourceRoot; defaulting ApiSuffix=TC12"; 'TC12' } }
+}
 
 # ---- authoritative plugin table (Src = TC_forward dir, Stage = TC_plugin/InternalName dir, Up = upstream owner/repo) ----
 $Table = @(
