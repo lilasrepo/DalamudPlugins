@@ -45,6 +45,7 @@ param(
   [switch]$SkipRelease,
   [switch]$ManifestOnly,
   [switch]$AllowStaleRepublish,   # override the frozen-version soft-block (publish a same-version re-clobber anyway, e.g. icon/manifest-only)
+  [switch]$AllowManifestShrink,   # override the Layer-4 guard: write a pluginmaster.json that DROPS plugins with no release at their staged version
   [string[]]$FreshHistory = @()   # plugin name(s) (Src/Stage/repo) to publish as ONE clean orphan commit + force-push (wipes prior history; use to scrub a past leak)
 )
 
@@ -428,6 +429,7 @@ foreach ($p in $selected) {
 # ---------------------------------------------------------------------------- manifest ----
 Write-Host "----- pluginmaster.json -----" -ForegroundColor White
 $entries = @()
+$missingRelease = @()   # Layer-4: staged version has no release -> entry would silently disappear
 foreach ($p in $Table) {
   $repo  = $p.Up.Split('/')[-1]
   $stage = Join-Path $SourceRoot ("TC_plugin\" + $p.Stage)
@@ -441,7 +443,34 @@ foreach ($p in $Table) {
   } else {
     $rel = Gh release view $tag --repo "$Account/$repo" --json tagName
     if ($rel.Ok) { $entries += (New-Entry $man.Data $repo $tag) }
+    else { $missingRelease += [pscustomobject]@{ Internal=[string]$man.Data.InternalName; Repo=$repo; Tag=$tag } }
   }
+}
+
+# ---- Layer-4 guard: the manifest must never LOSE a plugin (added 2026-07-29) ----
+# The loop above keys each entry on the CURRENTLY STAGED AssemblyVersion and only emits it when a
+# release already exists at that exact tag. So a plugin whose staged version moved but was never
+# published simply vanishes -- silently, with an "ok" summary, because the per-plugin loop above
+# never touched it. That is not hypothetical: publishing ICE alone on 2026-07-29 rewrote the live
+# manifest from 25 entries to 14, dropping every plugin whose refresh had bumped its version since
+# the last publish round (Artisan, AutoDuty, AutoHook, AutoRetainer, Automaton, Questionable, Saucy,
+# SomethingNeedDoing, Splatoon, WrathCombo, YesAlready, vnavmesh). Clients lose the plugin entirely.
+#
+# Layer-1 (Test-StaleRepublish) cannot see this: it only catches the opposite case, a same-version
+# re-clobber. See memory `reference_publish_scope_vs_frozen_guard`.
+if (-not $DryRun -and $missingRelease) {
+  Write-Host ""
+  Write-Host "  !! these plugins have NO release at their staged version and would be DROPPED:" -ForegroundColor Red
+  foreach ($m in $missingRelease) { Write-Host ("     {0,-22} needs {1}" -f $m.Internal, $m.Tag) -ForegroundColor Red }
+  Write-Host ""
+  Write-Host "  The staged build is newer than anything published, so there is nothing to point an" -ForegroundColor Yellow
+  Write-Host "  entry at. Publish them (-Plugins <names> -Execute) and re-run, or pass" -ForegroundColor Yellow
+  Write-Host "  -AllowManifestShrink to write a manifest without them ON PURPOSE." -ForegroundColor Yellow
+  if (-not $AllowManifestShrink) {
+    throw ("refusing to shrink pluginmaster.json by {0} plugin(s): {1}" -f `
+           $missingRelease.Count, (($missingRelease | ForEach-Object { $_.Internal }) -join ', '))
+  }
+  Write-Host "  -AllowManifestShrink given; writing the shrunken manifest anyway." -ForegroundColor Yellow
 }
 
 if (-not $entries) { Write-Host "  (no entries to write)"; }
