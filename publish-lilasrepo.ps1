@@ -112,12 +112,12 @@ $Table = @(
 $IconDir = Join-Path $PSScriptRoot 'icons'
 # InternalName -> served from $ManifestRepo/icons/<InternalName>.png (real upstream icon, re-hosted):
 $SelfHostedIcons = @(
-  'AntiAfkKick-Dalamud','Artisan','GatherBuddyReborn','Lifestream','NotificationMaster',
+  'AntiAfkKick-Dalamud','Artisan','GatherBuddyReborn','ICE','Lifestream','NotificationMaster',
   'Orbwalker','PriceInsight','Splatoon','TextAdvance'
 )
 # InternalName -> upstream NEVER shipped an icon; force blank so Dalamud uses its placeholder
 # (also clears Gearsetter's dead carvel.li URL). Supply a custom PNG + move to $SelfHostedIcons later.
-$BlankIcons = @('Gearsetter','SkipCutscene','NoClippy','ICE')
+$BlankIcons = @('Gearsetter','SkipCutscene','NoClippy')
 
 # ---------------------------------------------------------------------------- helpers ----
 function Resolve-Gh {
