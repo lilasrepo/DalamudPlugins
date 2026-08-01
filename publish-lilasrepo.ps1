@@ -7,7 +7,7 @@
   For each selected plugin this script:
     1. Forks the real upstream into lilasrepo (preserves the GitHub "forked from" badge).
     2. Pushes the TC_forward/<plugin> source onto the fork's `main` (source code visible).
-    3. Zips the built TC_plugin/<InternalName> staging tree and cuts a `v<ver>-TC12` release.
+    3. Zips the built TC_plugin/<InternalName> staging tree and cuts a `v<ver>-<ApiSuffix>` release.
   Then it regenerates the single pluginmaster.json (served raw from lilasrepo/DalamudPlugins)
   containing every plugin that currently has a published release.
 
@@ -54,8 +54,8 @@ $DryRun = -not $Execute
 
 # --- TC generation defaults from the source repo's tc-runtime.json (single source of truth) ---
 # Explicit -ApiLevel / -ApiSuffix always win. Without them, read $SourceRoot\tc-runtime.json;
-# if that file is unavailable, fall back to the API12-era values WITH a loud warning (so a
-# post-bump run against a stale/missing config can't silently tag TC12).
+# if that file is unavailable, fall back to hardcoded api12-era literals WITH a loud warning (so a
+# post-bump run against a stale/missing config can't silently tag the wrong generation).
 if ((-not $ApiLevel) -or (-not $ApiSuffix) -or (-not $GamePatch)) {
   $tcCfg = $null
   if ($SourceRoot) {
@@ -190,7 +190,7 @@ function Write-Utf8NoBom([string]$path,[string]$text){
 
 # Layer-1 frozen-version guard: a refresh that changes a plugin's BUILD but NOT its AssemblyVersion
 # publishes as a same-tag --clobber, and the in-game updater (which keys on AssemblyVersion) never
-# offers it to installed clients. Stranded <=> the v<ver>-TC12 tag already exists AND a BUILD-RELEVANT
+# offers it to installed clients. Stranded <=> the v<ver>-<ApiSuffix> tag already exists AND a BUILD-RELEVANT
 # file under TC_forward/<Src> changed AFTER that tag was first created (= the version's content moved
 # without the version number moving; anyone who installed the original v-build is stuck). We compare
 # against the tag's CREATION time (which a --clobber does NOT advance), so the warning persists after a
