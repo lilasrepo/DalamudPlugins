@@ -110,13 +110,13 @@ $Table = @(
 # upstream. PNGs live next to this script in ./icons and get pushed alongside pluginmaster.json.
 # This is refresh-proof: it does NOT depend on the plugin manifest, which /plugin_update overwrites.
 $IconDir = Join-Path $PSScriptRoot 'icons'
-# InternalName -> served from $ManifestRepo/icons/<InternalName>.png (real upstream icon, re-hosted):
-$SelfHostedIcons = @(
-  'AntiAfkKick-Dalamud','Artisan','GatherBuddyReborn','ICE','Lifestream','NotificationMaster',
-  'Orbwalker','PriceInsight','Splatoon','TextAdvance'
-)
+# Which plugins get the self-hosted URL is decided by whether icons/<InternalName>.png EXISTS
+# (see New-Entry) -- there is deliberately no name list to keep in sync. To re-host one more,
+# just drop the PNG in: scripts\fetch-plugin-icons.ps1 in the Dalamud repo pulls each staged
+# plugin's own IconUrl and writes it here under the right name.
 # InternalName -> upstream NEVER shipped an icon; force blank so Dalamud uses its placeholder
-# (also clears Gearsetter's dead carvel.li URL). Supply a custom PNG + move to $SelfHostedIcons later.
+# (also clears Gearsetter's dead carvel.li URL). To give one a custom icon later, just drop a
+# PNG into icons/<InternalName>.png -- the file-presence rule in New-Entry wins over this list.
 $BlankIcons = @('Gearsetter','SkipCutscene','NoClippy')
 
 # ---------------------------------------------------------------------------- helpers ----
@@ -158,7 +158,12 @@ function New-Entry($m,[string]$repo,[string]$tag){
   $name = Get-DisplayName ([string]$m.Name)
   $dl = "https://github.com/$Account/$repo/releases/download/$tag/$($m.InternalName).zip"
   $internal = [string]$m.InternalName
-  if ($SelfHostedIcons -contains $internal) {
+  # Presence of icons/<InternalName>.png IS the self-host decision (2026-08-02). It used to be
+  # the hand-maintained $SelfHostedIcons array, which could disagree with the directory in both
+  # directions: a downloaded icon nobody added to the array stayed pointed at upstream, and a
+  # name in the array with no file behind it published a raw.githubusercontent URL that 404s for
+  # every user. Deriving it from the directory the publisher already syncs makes both impossible.
+  if (Test-Path (Join-Path $IconDir "$internal.png")) {
     $icon = "https://raw.githubusercontent.com/$Account/$ManifestRepo/main/icons/$internal.png"
   } elseif ($BlankIcons -contains $internal) {
     $icon = ''
