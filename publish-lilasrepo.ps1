@@ -370,6 +370,18 @@ foreach ($p in $selected) {
       # the submodule working-tree content be committed as plain files. -File excludes the root .git dir.
       Get-ChildItem -LiteralPath $work -Recurse -Force -File -Filter '.git' -ErrorAction SilentlyContinue | Remove-Item -Force -ErrorAction SilentlyContinue
 
+      # De-gitlink any path the FORK's own index still carries as a submodule (mode 160000) from an
+      # earlier publish. `git add -A` treats a gitlink path as a submodule boundary and will NOT pick
+      # up plain-file content underneath it even when the working tree there is no longer a git repo
+      # (confirmed empirically, 2026-08-10, AutoHook/PunishLib: the .git-pointer prune above leaves
+      # the index entry itself untouched, so `git add -A` silently re-commits the SAME stale gitlink
+      # every publish). `git rm -r --cached` clears the index entry so the subsequent `add -A` stages
+      # the real files instead. Harmless no-op when there is nothing to clear.
+      $gitlinks = git -C $work ls-files -s 2>$null | Where-Object { $_ -match '^160000\s' } | ForEach-Object { ($_ -split "\t")[1] }
+      foreach ($gl in $gitlinks) {
+        git -C $work rm -r --cached -- "$gl" 2>&1 | Out-Null
+      }
+
       git -C $work add -A 2>&1 | Out-Null
       $outerSha = (& git -C $SourceRoot rev-parse --short HEAD 2>$null)
       git -C $work -c user.name='lilasrepo' -c user.email='lilasrepo@users.noreply.github.com' commit -m "port($($p.Stage)): TC API$ApiLevel source (based on TC_forward @ $outerSha)" 2>&1 | Out-Null
